@@ -1,0 +1,134 @@
+<head>
+  <title>SoftStore</title>
+  <style type="text/css">
+      
+      * {
+        margin:0px;
+        padding:0px;
+      }
+
+      ul{
+        list-style: none;
+      }
+      
+      .nav > li {
+        float:left;
+      }
+      .nav li a {
+        background-color:#0010;
+        color:#fff;
+        text-decoration:none;
+        padding:10px 12px;
+        display:block;
+      }
+      
+      .nav li a:hover {
+        background-color:#434343;
+      }
+      
+      .nav li ul {
+        display:none;
+        position:absolute;
+        min-width:140px;
+      }
+      
+      .nav li:hover > ul {
+        display:block;
+      }
+      
+      .nav li ul li {
+        position:relative;
+      }
+      
+      .nav li ul li ul {
+        right:-140px;
+        top:0px;
+      }
+      </style>
+</head>
+
+<body>
+  {{> topBar}}
+  {{> content}}
+</body>
+
+<template name="topBar">
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Inicio</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>Categorias</a>
+          <ul>
+                <li><a href="">Sistemas Operativos</a>
+                  <ul>
+                    <li><a href="">Linux</a></li>
+                    <li><a href="">Macintosh OS</a></li>
+                    <li><a href="">Microsoft Windows</a></li>
+                </ul>
+                </li>
+
+    
+                
+
+                <li><a href="">Juegos</a></li>
+                <li><a href="">Antivirus</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+     <ul class="nav navbar-nav navbar-right">
+       {{#if currentUser}}
+       <li><a href="#" data-toggle="modal" id="cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Usuario: {{currentUser.username}}</a></li>
+        <li><a href="#" data-toggle="modal" id="logout"><span class="fa fa-sign-out" aria-hidden="true"></span> Cerrar Sesión</a></li>
+        {{else}}
+        <li><a href="#" data-toggle="modal" id="login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Iniciar Sesión</a></li>
+        <li><a href="#" data-toggle="modal" id="register"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Registrarse</a></li>
+       {{/if}}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+  </nav>
+</template>
+
+<template name="content">  
+<div class="container">
+  <div class="fondo">
+  <div class="row">  
+    <div class="col-md-12 ">
+      <h1 class="titulo-principal">SOFTSTORE</h1>
+    </div>
+  </div>
+    <div class="row">
+          <div class="col-md-4">
+          </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <span class="fa fa-search" aria-hidden="true"> </span> Búsqueda    
+                  </div>
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <input type="search" class="form-control" name="name" value="" placeholder="¿Qué estás buscando?">
+                    </div>
+                    <button class="form-control" name="buttom"> Buscar </button>
+                  </div>
+                </div>
+            </div>
+    </div>
+  </div>
+</div>
+</template>
