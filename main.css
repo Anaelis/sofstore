@@ -1,0 +1,64 @@
+/* CSS declarations go here */
+
+.logo{
+	margin-left: 280px;
+	margin-right: 1000px;
+}
+
+body{
+	background-image: url();
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.topbar{
+
+	background: #333;
+	color:#99c0of;
+}
+
+.navbar{
+	background-color: #333;
+	margin-bottom: 0px;
+}
+
+.navbar .nav >li >a{
+
+	color:white;
+}
+
+.navbar li a:hover, .navbar li a:active{
+	
+	color: #A9A9A9 !important;
+}
+
+.fondo{
+	color: white;
+	text-align: center;
+	/*background: url('http://webgoodmorning.com/wp-content/uploads/2015/03/ClickGetBuy-Bg13.png') no-repeat center top;*/
+	background: url('papers.co-mi96-mountain-sunlight-white-marco-jorger-nature-1440x900.jpg') no-repeat center top;
+	/*background: url('http://1.bp.blogspot.com/-fT-wVZN5Tig/VfCe1JsLskI/AAAAAAAAI5U/GS9avvL9gLY/s1600/imagenes%2Bde%2Bfondo%2B9.jpg') no-repeat center top;*/
+	background-size: cover;
+	min-height:650px;
+	padding-top:14em;
+
+}
+
+.titulo-principal{
+	color: white;
+	font-size: 5em;
+	font-family: 'Lato', Arial, sans-serif;
+	font-style: italic;
+}
+
+.panel-heading, .btn{
+	
+	background-color: #6E6E6E !important;
+	color: white !important;
+}
+
+.btn-search{
+
+	background-color: #6E6E6E !important;
+	color: white !important;
+}
